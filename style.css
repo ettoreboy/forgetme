@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+
+body {
+    background-color: #a8b2cb;
+    color: #FFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h1, h2, h3, h4 {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 16px;
+
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+.jesus {
+    width: 40%;
+    float: right;
+}
+
+.text {
+    width: 60%;
+    float: left;
+}
