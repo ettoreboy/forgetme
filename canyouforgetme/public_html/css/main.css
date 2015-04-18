@@ -9,10 +9,19 @@ body {
     padding-bottom: 20px;
 }
 
-.jumbotron {
- text-align: center;
+.jumbotron p, h1 {
+    text-align: center;
+
 }
 
+
+@media (max-width: 360px)  { 
+
+    label {
+        display:none;
+    }
+
+}
 
 
 

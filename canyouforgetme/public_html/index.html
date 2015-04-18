@@ -1,3 +1,4 @@
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -25,14 +26,44 @@
             <div class="container">
                 <h1>Can you be forgotten?</h1>
                 <p>Exercise your right to be deleted from the Internet. Find out how easy it is</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+                        <form class="form-horizontal" onsubmit="return checkAndSubmit(event)">
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="email@so.fake">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputName" class="col-sm-2 control-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputName" placeholder="Jane">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputSurname" class="col-sm-2 control-label">Surname</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputSurname" placeholder="Doe">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button id="submit" type="submit" class="btn btn-default">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <p><a class="btn btn-primary btn-sm" href="" role="button">Learn more &raquo;</a></p>
             </div>
         </div>
 
         <div class="container">
-            <!-- Example row of columns -->
+            <!-- Results -->
             <div class="row">
-                <div class="col-md-4">
+                <div id="results" class="col-md-10 col-md-offset-2">
                 </div>
 
             </div>
@@ -47,7 +78,6 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function (b, o, i, l, e, r) {
