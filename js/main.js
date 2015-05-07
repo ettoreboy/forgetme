@@ -108,7 +108,7 @@ function checkAndSubmit(event) {
     console.log("Request to: " + piplAPI);
     document.getElementById("info");
     return getSites(piplAPI).then(function (founds) {
-        foundsLength = founds.length;
+        var foundsLength = founds.length;
         console.log("FOUNDED: " + foundsLength);
         addInfoElement("Founded <b>" + foundsLength + " site/s</b> registered under " + "<b>" + email + "</b>");
         $.getJSON('sites.json').then(function (sitesdata) {
@@ -116,14 +116,12 @@ function checkAndSubmit(event) {
             $.each(sitesdata, function (k, v) {
                 current = v;
                 $.each(founds, function (k, domainFounded) {
-                    console.log("Checking:" + domainFounded[1] + " = " + current.domains);
                     if (domainFounded[1] == current.domains) {
-                        console.log(domainFounded[0] + " " + domainFounded[1] + " " + current.difficulty);
+                        console.log("Match: "+domainFounded[0] + " " + domainFounded[1] + " " + current.difficulty);
                         addSiteFound(domainFounded[0] + " - " + domainFounded[1], current.url, current.difficulty, current.notes);
                         founds.pop(domainFounded);
                         return false;
                     }
-                    //console.log(v.domains);
                 });
 
             });
