@@ -2,7 +2,6 @@
 /* ==========================================================================
    Custom styles
    ========================================================================== */
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -14,14 +13,14 @@ body {
 }
 
 .jumbotron {
-    
+
     width: 100%;
     background-color:  black;
-    background-image: -moz-linear-gradient(top, rgba(0,5,1,0.02) 0%, rgba(0,0,0,0.9) 90%, rgba(0,0,0,1) 100%), url("../img/bg.jpg") ; 
+    background-image: -moz-linear-gradient(top, rgba(0,5,1,0.02) 0%, rgba(0,0,0,0.9) 90%, rgba(0,0,0,1) 100%), url("../img/bg.jpg") ;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,5,1,0.02)), color-stop(90%,rgba(7,51,29,0.9)), color-stop(100%,rgba(0,0,0,1))), url("../img/bg.jpg");
-    background-image: -webkit-linear-gradient(top, rgba(0,5,1,0.02) 0%,rgba(0,0,0,0.92) 92%,rgba(0,0,0,1) 100%), url("../img/bg.jpg") ; 
+    background-image: -webkit-linear-gradient(top, rgba(0,5,1,0.02) 0%,rgba(0,0,0,0.92) 92%,rgba(0,0,0,1) 100%), url("../img/bg.jpg") ;
     background-image: -o-linear-gradient(top, rgba(0,5,1,0.02) 0%,rgba(0,0,0,0.92) 92%,rgba(0,0,0,1) 100%), url("../img/bg.jpg");
-    background-size: cover;   
+    background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 40px;
 
@@ -97,16 +96,16 @@ footer  {
 }
 
 @keyframes bounce {
-    0%, 100% { 
+    0%, 100% {
         transform: scale(0.0);
         -webkit-transform: scale(0.0);
-    } 50% { 
+    } 50% {
         transform: scale(1.0);
         -webkit-transform: scale(1.0);
     }
 }
 
-@media (max-width: 360px)  { 
+@media (max-width: 360px)  {
 
     label {
         display:none;
