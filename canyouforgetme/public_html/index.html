@@ -59,66 +59,51 @@
             </div>
         </div>
 
-        <!-- Results -->
         <div class="container">
             <div class="row">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
                 <div id="info" class="col-md-10 col-md-offset-1">
                 </div>
+
                 <!--Results-->
                 <div id="list-group" class="list-group col-md-10 col-md-offset-1"></div>
             </div>
-        </div>
 
-        <div class="container" id="description">
-            <div class="row">
-
+            <div id="description">
                 <div class="col-md-10 col-md-offset-1">
                     <h2>What the heck is this!?</h2>
-                </div>
-                <div class="col-md-10 col-md-offset-1">
+
+
                     <p><b>canyouforgetme</b> lets you know which public accounts, connected to your e-mail or personal name,
                         are visible on the public web and how easy would it be to delete yourself from those account.</p>
                     <p>It combines the results of <a href="www.pipl.com">Pipl.com</a> and <a href="www.justdelete.me">Just Delete Me</a>
                         in order to grade how difficult would it be to delete your public records.
                     <p>At the moment, <b>canyouforgetme</b> works only with exact matches, thus, only if the e-mail and name given
-                    matches exactly the results founded by Pipl.com. In the future, I will add the possibility to choose the exact person among possible matches.</p>
-                        <p>Give it a try!</p>
+                        matches exactly the results founded by Pipl.com. In the future, I will add the possibility to choose the exact person among possible matches.</p>
+                    <p>Give it a try!</p>
 
                 </div>
 
             </div>
         </div>
 
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-offset-1">
-                        <p>Get this page code on <a href="">Github!</a></p>
-                    </div>
-                </div>
-            </div>
+
+
+        <footer>                               
+            <p>Get this page code on <a href="">Github!</a></p>
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-                            (function (b, o, i, l, e, r) {
-                                b.GoogleAnalyticsObject = l;
-                                b[l] || (b[l] =
-                                        function () {
-                                            (b[l].q = b[l].q || []).push(arguments)
-                                        });
-                                b[l].l = +new Date;
-                                e = o.createElement(i);
-                                r = o.getElementsByTagName(i)[0];
-                                e.src = '//www.google-analytics.com/analytics.js';
-                                r.parentNode.insertBefore(e, r)
-                            }(window, document, 'script', 'ga'));
-                            ga('create', 'UA-XXXXX-X', 'auto');
-                            ga('send', 'pageview');
+                            $(document).ready(function () {
+                                $(".spinner").hide();
+                            });
         </script>
     </body>
 </html>
