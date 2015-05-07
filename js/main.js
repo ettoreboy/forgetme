@@ -1,6 +1,7 @@
 
 //Add elements to page
 function addInfoElement(content) {
+  "use strict";
     var newdiv = document.createElement('h3');
     newdiv.innerHTML = content;
     $(newdiv).hide().appendTo("#info").fadeIn(1000);
@@ -8,7 +9,7 @@ function addInfoElement(content) {
 
 //Retrieve accounts informations
 function getSites(url) {
-
+  "use strict";
     return $.getJSON(url).then(function (data) {
         var founds = [];
         if (data.person) {
@@ -26,7 +27,7 @@ function getSites(url) {
                         url = v;
                         console.log(v);
 
-                    }                  
+                    }
                 });
                 founds.push([name, domain, url]);
             });
@@ -45,6 +46,7 @@ function getSites(url) {
 
 //Create a labelled item depending on the rate
 function addSiteFound(name, domain, rate, info) {
+  "use strict";
     var newa = document.createElement("a");
     switch (rate) {
         case "easy":
@@ -68,6 +70,7 @@ function addSiteFound(name, domain, rate, info) {
 
 //Update string parameter, if present
 function updateQueryStringParameter(uri, key, value) {
+  "use strict";
     var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
     var separator = uri.indexOf('?') !== -1 ? "&" : "?";
     if (uri.match(re)) {
@@ -79,18 +82,19 @@ function updateQueryStringParameter(uri, key, value) {
 }
 //Check input and submit
 function checkAndSubmit(event) {
+  "use strict";
     event.preventDefault();
     $("#list-group").empty();
     $("#info").empty();
     $(".spinner").show();
-    
+
     var email = $('#inputEmail').val();
     var name = $('#inputName').val();
     var last = $('#inputLastname').val();
     if (email === "") {
         $(".spinner").hide();
         return false;
-        
+
     }
 
     var piplAPI = 'http://api.pipl.com/search/v4/' + "?email=" + email + "&key=kufrdccc7m2sqqjjdr3kcbzn" + "&callback=?";
@@ -127,4 +131,3 @@ function checkAndSubmit(event) {
         $(".spinner").hide();
     });
 }
-
