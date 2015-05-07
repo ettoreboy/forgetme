@@ -6,7 +6,34 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    background-color: #C4D9BF;
+
+}
+
+.jumbotron {
+
+    color: white;
+    background: white;
+    background-image: url("matrix.png") ; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.modal-header {
+    background-color:black;
+    color: white;
+}
+
+.modal-footer {
+    background-color: black; 
+}
+
+button {
+    background-color: #62BF49;
+    color: black;
 }
 
 .jumbotron p, h1 {
@@ -14,6 +41,19 @@ body {
 
 }
 
+#description{
+    line-height: 1.5;
+    font-size: 18px;
+    
+}
+
+
+footer  {
+
+    font-size: 20px;
+    font-weight: 700;
+
+}
 
 @media (max-width: 360px)  { 
 
@@ -22,17 +62,3 @@ body {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
