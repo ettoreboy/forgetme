@@ -4,6 +4,7 @@ function addInfoElement(content) {
   "use strict";
     var newdiv = document.createElement('h3');
     newdiv.innerHTML = content;
+    $("#description").slideDown('slow');
     $(newdiv).hide().appendTo("#info").fadeIn(1000);
 }
 
@@ -33,12 +34,14 @@ function getSites(url) {
             });
         } else {
             $(".spinner").hide();
+            $("#submit").attr('disabled',false);
             addInfoElement("There are no exact public matches for this email! Try to add your name..");
         }
         return founds;
     })
             .fail(function () {
                 $(".spinner").hide();
+                $("#submit").attr('disabled',false);
                 addInfoElement("Ups! Somenthing went wrong, try again.");
             });
 
@@ -84,6 +87,7 @@ function updateQueryStringParameter(uri, key, value) {
 function checkAndSubmit(event) {
   "use strict";
     event.preventDefault();
+    
     $("#list-group").empty();
     $("#info").empty();
     $(".spinner").show();
@@ -93,10 +97,11 @@ function checkAndSubmit(event) {
     var last = $('#inputLastname').val();
     if (email === "") {
         $(".spinner").hide();
+        $("#submit").attr('disabled',false);
         return false;
 
     }
-
+    $("#submit").attr('disabled',true);
     var piplAPI = 'https://api.pipl.com/search/v4/' + "?email=" + email + "&key=kdrphm4hv87tab5q34v2sf5n" + "&callback=?";
     if (name) {
         piplAPI = updateQueryStringParameter(piplAPI, "first_name", name);
@@ -127,5 +132,7 @@ function checkAndSubmit(event) {
             });
         });
         $(".spinner").hide();
+        $("#submit").attr('disabled',false);
     });
+     
 }

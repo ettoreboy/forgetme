@@ -36,8 +36,10 @@ span {
 }
 
 
-button {
-    background-color: #e38d13;
+button, #submit {
+    background: white;
+    border-color: white;
+    
 }
 
 .jumbotron p, h1 {
@@ -53,7 +55,7 @@ button {
 }
 
 .list-group {
-    padding-left: 15px;
+    padding-left: 26px;
 }
 
 footer  {
@@ -64,8 +66,8 @@ footer  {
 }
 
 .spinner {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 
     position: relative;
     margin: auto;
