@@ -41,7 +41,7 @@ button, #submit {
     border-color: white;
 }
 
-#more {
+.btn-more {
   -webkit-border-radius: 10;
   -moz-border-radius: 10;
   border-radius: 11px;
@@ -55,9 +55,14 @@ button, #submit {
   max-height: 60px;
 }
 
-#more:hover {
+.btn-more:hover {
   background: #bf7711;
   text-decoration: none;
+}
+
+.btn-more:visited{
+   text-decoration: none;
+   color: #ffffff;
 }
 
 .jumbotron p, h1 {
