@@ -49,7 +49,7 @@ function getSites(url) {
 //Create a labelled item depending on the rate
 function addSiteFound(name, domain, rate, info) {
     "use strict";
-    var newa = document.createElement("a");
+    var newa = document.createElement('a');
     if (!info) {
         info = "No available information about how to delete from this website";
     }
@@ -127,7 +127,7 @@ function checkAndSubmit(event) {
             $.each(sitesdata, function (k, v) {
                 current = v;
                 $.each(founds, function (k, domainFounded) {
-                    if (domainFounded[1] == current.domains) {
+                    if (domainFounded[1] === current.domains) {
                         console.log("Match: " + domainFounded[0] + " " + domainFounded[1] + " " + current.difficulty);
                         addSiteFound(domainFounded[0] + " - " + domainFounded[1], current.url, current.difficulty, current.notes);
                         founds.pop(domainFounded);
